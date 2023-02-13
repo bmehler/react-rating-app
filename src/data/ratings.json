@@ -1,0 +1,130 @@
+{
+  "ratings": [
+    {
+      "id": 1,
+      "name": "Mike Meier",
+      "city": "Munich",
+      "gender": "Male",
+      "age": 27,
+      "department": "Planning",
+      "rating": {
+        "quality": 20,
+        "quantity": 20,
+        "knowledge": 40,
+        "initiative": 10,
+        "communication": 90,
+        "team": 80,
+        "learning": 50,
+        "motivation": 90,
+        "performance": 70,
+        "organization": 50,
+        "total": 52
+      }
+    },
+    {
+      "id": 2,
+      "name": "Steve Summer",
+      "city": "Frankfurt",
+      "gender": "Male",
+      "age": 28,
+      "department": "Marketing",
+      "rating": {
+        "quality": 100,
+        "quantity": 90,
+        "knowledge": 40,
+        "initiative": 70,
+        "communication": 90,
+        "team": 80,
+        "learning": 90,
+        "motivation": 90,
+        "performance": 80,
+        "organization": 30,
+        "total": 76
+      }
+    },
+    {
+      "id": 3,
+      "name": "Bruce Buttler",
+      "city": "Hamburg",
+      "gender": "Male",
+      "age": 29,
+      "department": "Accounting",
+      "rating": {
+        "quality": 90,
+        "quantity": 20,
+        "knowledge": 40,
+        "initiative": 10,
+        "communication": 90,
+        "team": 80,
+        "learning": 50,
+        "motivation": 90,
+        "performance": 70,
+        "organization": 10,
+        "total": 55
+      }
+    },
+    {
+      "id": 4,
+      "name": "Daisy Dougles",
+      "city": "New York",
+      "gender": "Female",
+      "age": 30,
+      "department": "Accounting",
+      "rating": {
+        "quality": 10,
+        "quantity": 20,
+        "knowledge": 40,
+        "initiative": 10,
+        "communication": 90,
+        "team": 80,
+        "learning": 50,
+        "motivation": 90,
+        "performance": 70,
+        "organization": 10,
+        "total": 47
+      }
+    },
+    {
+      "id": 5,
+      "name": "Molly Michell",
+      "city": "Michigan",
+      "gender": "Female",
+      "age": 30,
+      "department": "Marketing",
+      "rating": {
+        "quality": 10,
+        "quantity": 30,
+        "knowledge": 40,
+        "initiative": 10,
+        "communication": 90,
+        "team": 80,
+        "learning": 50,
+        "motivation": 90,
+        "performance": 70,
+        "organization": 10,
+        "total": 48
+      }
+    },
+    {
+      "id": 6,
+      "name": "Stephan Hunter",
+      "city": "Munich",
+      "gender": "Male",
+      "age": "36",
+      "department": "IT",
+      "rating": {
+        "quality": 10,
+        "quantity": 10,
+        "knowledge": 10,
+        "initiative": 10,
+        "communication": 10,
+        "team": 10,
+        "learning": 10,
+        "motivation": 10,
+        "performance": 10,
+        "organization": 100,
+        "total": 19
+      }
+    }
+  ]
+}
