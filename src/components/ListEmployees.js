@@ -42,21 +42,27 @@ export const ListEmployees = () => {
     const handleDelete = (e) => {
         let id = e.target.id;
         console.log('handleDelete', e.target.id);
-
-        axios.delete(`http://localhost:3004/ratings/${id}`).then(result => {
-            console.log('Employee deleted!');
-            axios.get('http://localhost:3004/ratings').then(result => {
-                setEmployees(result.data);
-                navigate('/');
-            })
-        }) 
+        deleteEmployee(id);
+        navigate('/');
     }
+
+    const deleteEmployee = async (id) => {
+        await axios.delete(`http://localhost:3004/ratings/${id}`);
+        setEmployees(
+            employees.filter((employee) => {
+                return employee.id != id;
+            })
+        );
+    };
     
     useEffect(() => {
-        axios.get('http://localhost:3004/ratings').then(result => {
-            result.data.sort((a, b) => b.rating.total - a.rating.total);
-            setEmployees(result.data);
-        })
+        const fetchEmployees = async () => {
+            await axios.get('http://localhost:3004/ratings').then(result => { 
+                result.data.sort((a, b) => b.rating.total - a.rating.total);
+                setEmployees(result.data);
+            });
+        };
+        fetchEmployees();
     }, []);
 
 
