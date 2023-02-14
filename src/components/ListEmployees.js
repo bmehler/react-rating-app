@@ -94,7 +94,7 @@ export const ListEmployees = () => {
                                     </Card.Text>
                                     <Link to={`/detail/${employee.id}`}><CreateButton handle={null} class={'show me-1'} variant={'outline-dark'} icon={'eye'} text={'Show'} submit={null} /></Link>
                                     <Link to={`/edit/${employee.id}`}><CreateButton handle={null} class={'edit me-1'} variant={'danger'} icon={'edit'} text={'Edit'} submit={null} /></Link>
-                                    <Button id={employee.id} onClick={handleDelete} variant="outline-danger"><FontAwesomeIcon icon={faTrash} /> Delete</Button>
+                                    <CreateButton handle={handleDelete} id={employee.id} class={'show me-1'} variant={'btn-outline-danger'} icon={'trash'} text={'Delete'} submit={null} />
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -119,7 +119,7 @@ export const ListEmployees = () => {
                                         <td>
                                             <Link to={`/edit/${employee.id}`}><CreateButton handle={null} class={'edit me-1'} variant={'danger'} icon={'edit'} text={'Edit'} submit={null} /></Link>
                                             <Link to={`/detail/${employee.id}`}><CreateButton handle={null} class={'show me-1'} variant={'outline-dark'} icon={'eye'} text={'Show'} submit={null} /></Link>
-                                            <Button id={employee.id} onClick={handleDelete} variant="outline-danger"><FontAwesomeIcon icon={faTrash} /> Delete</Button>
+                                            <CreateButton handle={handleDelete} id={employee.id} class={'show me-1'} variant={'btn-outline-danger'} icon={'trash'} text={'Delete'} submit={null} />
                                         </td>
                                     </tr>
                                 ))}
