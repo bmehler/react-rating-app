@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { CreateButton } from '../helper/CreateButton';
-import { EmployeeFormFields } from '../forms/EmployeeFormFields'
-import { RatingFormFields } from '../forms/RatingFormFields'
+import { CreateButton } from '../utils/helper/CreateButton';
+import { EmployeeFormFields } from './forms/EmployeeFormFields'
+import { RatingFormFields } from './forms/RatingFormFields'
 
 export const CreateEmployee = (props) => {
 

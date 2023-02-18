@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation } from './templates/helper/Navigation';
+import { Navigation } from './views/Navigation';
 import { ShowRating } from './components/ShowRating';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ListEmployees } from './components/ListEmployees';

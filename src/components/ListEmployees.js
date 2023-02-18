@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Col, Row, Card, Form, Button, Table } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { faUserFriends, faUserShield, faList, faTh, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faUserFriends, faUserShield, faList, faTh } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ButtonRating } from "../helper/Rating/ButtonRating";
-import { CreateButton } from '../helper/CreateButton';
+import { ButtonRating } from "../utils/helper/Rating/ButtonRating";
+import { CreateButton } from '../utils/helper/CreateButton';
 import axios from 'axios';
 
 export const ListEmployees = () => {
@@ -94,7 +94,7 @@ export const ListEmployees = () => {
                                     </Card.Text>
                                     <Link to={`/detail/${employee.id}`}><CreateButton handle={null} class={'show me-1'} variant={'outline-dark'} icon={'eye'} text={'Show'} submit={null} /></Link>
                                     <Link to={`/edit/${employee.id}`}><CreateButton handle={null} class={'edit me-1'} variant={'danger'} icon={'edit'} text={'Edit'} submit={null} /></Link>
-                                    <CreateButton handle={handleDelete} id={employee.id} class={'show me-1'} variant={'btn-outline-danger'} icon={'trash'} text={'Delete'} submit={null} />
+                                    <CreateButton handle={handleDelete} id={employee.id} class={'show me-1'} variant={'primary'} icon={'trash'} text={'Delete'} submit={null} />
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -119,7 +119,7 @@ export const ListEmployees = () => {
                                         <td>
                                             <Link to={`/edit/${employee.id}`}><CreateButton handle={null} class={'edit me-1'} variant={'danger'} icon={'edit'} text={'Edit'} submit={null} /></Link>
                                             <Link to={`/detail/${employee.id}`}><CreateButton handle={null} class={'show me-1'} variant={'outline-dark'} icon={'eye'} text={'Show'} submit={null} /></Link>
-                                            <CreateButton handle={handleDelete} id={employee.id} class={'show me-1'} variant={'btn-outline-danger'} icon={'trash'} text={'Delete'} submit={null} />
+                                            <CreateButton handle={handleDelete} id={employee.id} class={'show me-1'} variant={'primary'} icon={'trash'} text={'Delete'} submit={null} />
                                         </td>
                                     </tr>
                                 ))}
