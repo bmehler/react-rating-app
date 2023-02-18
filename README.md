@@ -17,7 +17,7 @@ The Api is deliverd by JSON Server
 ```js
 npm install -g json-server
 cd react-rating-app
-json-server --watch src/data/ratings.json --port 3004
+json-server --watch src/services/data/ratings.json --port 3004
 ```
 
 Start the the app
