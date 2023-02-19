@@ -13,6 +13,14 @@ export const CreateEmployee = (props) => {
 
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
+
+    const createEmployee = async (ratings) => {
+        await axios.post('http://localhost:3004/ratings', ratings).then(result => {
+            console.log('New employee created!');
+            navigate('/');
+        })
+    };
+
     const onSubmit = data => {
         //alert(JSON.stringify(data));
         const ratings = {
@@ -41,10 +49,8 @@ export const CreateEmployee = (props) => {
             }
         }
 
-        axios.post('http://localhost:3004/ratings', ratings).then(result => {
-            console.log('New employee created!');
-            navigate('/');
-        })
+        createEmployee(ratings);
+
     };
 
     return (

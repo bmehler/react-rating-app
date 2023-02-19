@@ -56,6 +56,12 @@ export const EditEmployee = (props) => {
         document.getElementById("button-hide").classList.add("active");
     }
 
+    const editEmployee = async (ratings) => {
+        await axios.put(`http://localhost:3004/ratings/${id}`, ratings).then(result => {
+            console.log('Employee edited!');
+            navigate('/');
+        })
+    };
 
     const onSubmit = data => {
         const ratings = {
@@ -84,10 +90,7 @@ export const EditEmployee = (props) => {
             }
         }
 
-        axios.put(`http://localhost:3004/ratings/${id}`, ratings).then(result => {
-            console.log('Employee edited!');
-            navigate('/');
-        })
+        editEmployee(ratings);
 
     };
 
